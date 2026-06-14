@@ -148,16 +148,16 @@ During testing, all buckets were reported as encrypted. AWS currently enables SS
 4. Manual Invocation:
    - After saving your function, manually trigger it.
    - Review the Lambda logs to identify the buckets without server-side encryption.
+
+ <br><br>
  
- 
-Assignment 5: Auto-Tagging EC2 Instances on Launch
-Goal
-Whenever a new EC2 instance is launched:
+## Assignment 5: Auto-Tagging EC2 Instances on Launch
+### Goal: Whenever a new EC2 instance is launched:
 •	Lambda is triggered automatically 
 •	Lambda adds tags: 
-o	LaunchDate = current date 
-o	Environment = Test (or any custom value)
-Task: Automatically tag any newly launched EC2 instance with the current date and a custom tag.
+   o	LaunchDate = current date 
+   o	Environment = Test (or any custom value)
+### Task: Automatically tag any newly launched EC2 instance with the current date and a custom tag.
 
 1. EC2 Setup:
    - Ensure you have the capability to launch EC2 instances.
@@ -195,11 +195,12 @@ Note: Amazon EventBridge (formerly CloudWatch Events) was used to trigger the La
     -CloudeWatch logs:
  
 Amazon EventBridge (formerly CloudWatch Events) was configured to monitor EC2 state changes. When a new EC2 instance entered the Running state, EventBridge triggered the Lambda function, which automatically added the LaunchDate and Environment tags.
- 
-Assignment 6: Monitor and Alert High AWS Billing
-Goal
-Check AWS billing daily and send an email alert if spending exceeds a threshold.
-Task: Set up a Lambda function to check your AWS billing amount daily, and if it exceeds a specified threshold, send an alert via SNS.
+
+<br><br>
+ 
+## Assignment 6: Monitor and Alert High AWS Billing
+### Goal: Check AWS billing daily and send an email alert if spending exceeds a threshold.
+### Task: Set up a Lambda function to check your AWS billing amount daily, and if it exceeds a specified threshold, send an alert via SNS.
 
 1. SNS Setup:
    - Navigate to the SNS dashboard and create a new topic.
